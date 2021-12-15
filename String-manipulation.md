@@ -105,7 +105,7 @@ data("sentences")
  
 
 ```
-## Fruit data totally have 80 fruit names and these are individual srings in a vector
+Fruit data totally have 80 fruit names and these are individual srings in a vector
 ```
 
 
@@ -144,7 +144,7 @@ The following is a glimpse of 'sentence' data
 
 
 ```
-## Number of sentences we totally have is  720 and these are individual srings in a vector
+Number of sentences we totally have is  720 and these are individual srings in a vector
 ```
 
 We shall use some of the fruit names and sentences randomly from the above dataset in the notes
@@ -160,7 +160,7 @@ sample_fruit
 ```
 
 ```
-## [1] "blackcurrant" "cherry"       "damson"       "goji berry"
+[1] "blackcurrant" "cherry"       "damson"       "goji berry"  
 ```
 
 ```r
@@ -168,7 +168,7 @@ str_length(sample_fruit)
 ```
 
 ```
-## [1] 12  6  6 10
+[1] 12  6  6 10
 ```
 
 
@@ -182,8 +182,8 @@ print(f_upper)
 ```
 
 ```
-## [1] "APPLE"       "APRICOT"     "AVOCADO"     "BANANA"      "BELL PEPPER"
-## [6] "BILBERRY"
+[1] "APPLE"       "APRICOT"     "AVOCADO"     "BANANA"      "BELL PEPPER"
+[6] "BILBERRY"   
 ```
 
 
@@ -194,8 +194,8 @@ print(f_lower)
 ```
 
 ```
-## [1] "apple"       "apricot"     "avocado"     "banana"      "bell pepper"
-## [6] "bilberry"
+[1] "apple"       "apricot"     "avocado"     "banana"      "bell pepper"
+[6] "bilberry"   
 ```
 
 In some scenario we wish to capitalize each word in a string and this can be done using **`stringr::str_to_title()`**, we specify input vector and **`locale`** is used for representing string in other language,default is English 
@@ -207,8 +207,8 @@ print(sample)
 ```
 
 ```
-## [1] "Glue the sheet to the dark blue background."
-## [2] "It's easy to tell the depth of a well."
+[1] "Glue the sheet to the dark blue background."
+[2] "It's easy to tell the depth of a well."     
 ```
 
 ```r
@@ -218,8 +218,8 @@ print(cap)
 ```
 
 ```
-## [1] "Glue The Sheet To The Dark Blue Background."
-## [2] "It's Easy To Tell The Depth Of A Well."
+[1] "Glue The Sheet To The Dark Blue Background."
+[2] "It's Easy To Tell The Depth Of A Well."     
 ```
 
 ```r
@@ -228,7 +228,7 @@ str_to_title("it is invariable",locale="tr")
 ```
 
 ```
-## [1] "It Is Invariable"
+[1] "It Is Invariable"
 ```
 
 
@@ -240,8 +240,8 @@ string_2
 ```
 
 ```
-## [1] "the salt breeze came across from the sea."
-## [2] "what joy there is in living."
+[1] "the salt breeze came across from the sea."
+[2] "what joy there is in living."             
 ```
 
 ```r
@@ -250,8 +250,8 @@ print(sent)
 ```
 
 ```
-## [1] "The salt breeze came across from the sea."
-## [2] "What joy there is in living."
+[1] "The salt breeze came across from the sea."
+[2] "What joy there is in living."             
 ```
 
 ## Trimming white spaces
@@ -268,7 +268,7 @@ print(text)
 ```
 
 ```
-## [1] "   \n    \n    \nThere are no secrets to success. It is the result of preparation, hard work, and learning from failure.                                 "
+[1] "   \n    \n    \nThere are no secrets to success. It is the result of preparation, hard work, and learning from failure.                                 "
 ```
 
 ```r
@@ -277,7 +277,7 @@ trimws(text)
 ```
 
 ```
-## [1] "There are no secrets to success. It is the result of preparation, hard work, and learning from failure."
+[1] "There are no secrets to success. It is the result of preparation, hard work, and learning from failure."
 ```
 
 ```r
@@ -286,7 +286,7 @@ trimws(text,which="l")#for left side
 ```
 
 ```
-## [1] "There are no secrets to success. It is the result of preparation, hard work, and learning from failure.                                 "
+[1] "There are no secrets to success. It is the result of preparation, hard work, and learning from failure.                                 "
 ```
 
 ```r
@@ -294,7 +294,7 @@ trimws(text,"ri")#for right side
 ```
 
 ```
-## [1] "   \n    \n    \nThere are no secrets to success. It is the result of preparation, hard work, and learning from failure."
+[1] "   \n    \n    \nThere are no secrets to success. It is the result of preparation, hard work, and learning from failure."
 ```
 
 ```r
@@ -302,7 +302,7 @@ trimws(text,"bot")#for both sides
 ```
 
 ```
-## [1] "There are no secrets to success. It is the result of preparation, hard work, and learning from failure."
+[1] "There are no secrets to success. It is the result of preparation, hard work, and learning from failure."
 ```
 
 ## Truncating a String
@@ -315,7 +315,7 @@ str_trunc(string1,width=max(6,round(nchar(string1)/2)),side="center")
 ```
 
 ```
-## [1] "person...l.com" "user2a...l.com"
+[1] "person...l.com" "user2a...l.com"
 ```
 
 ```r
@@ -323,8 +323,8 @@ string_2=sentences[c(1,55)];string_2
 ```
 
 ```
-## [1] "The birch canoe slid on the smooth planks."
-## [2] "A saw is a tool used for making boards."
+[1] "The birch canoe slid on the smooth planks."
+[2] "A saw is a tool used for making boards."   
 ```
 
 ```r
@@ -333,7 +333,7 @@ str_trunc(string_2,width=max(6,round(nchar(string_2)/2)),side="right")
 ```
 
 ```
-## [1] "The birch canoe sl..." "A saw is a tool us..."
+[1] "The birch canoe sl..." "A saw is a tool us..."
 ```
 
 ```r
@@ -342,7 +342,7 @@ str_trunc(string_2,width=max(6,round(nchar(string_2)/2)),side="left")
 ```
 
 ```
-## [1] "...the smooth planks." "...for making boards."
+[1] "...the smooth planks." "...for making boards."
 ```
 
 ## To abbreviate strings
@@ -405,7 +405,7 @@ words=fruit[c(1,11,43,17,47)];words
 ```
 
 ```
-## [1] "apple"        "boysenberry"  "kumquat"      "chili pepper" "lychee"
+[1] "apple"        "boysenberry"  "kumquat"      "chili pepper" "lychee"      
 ```
 
 ```r
@@ -413,7 +413,7 @@ paste0(words,collapse = " ")
 ```
 
 ```
-## [1] "apple boysenberry kumquat chili pepper lychee"
+[1] "apple boysenberry kumquat chili pepper lychee"
 ```
 
 joining multiple individual strings in to single string can be done using **`sep`** argument in the function
@@ -427,7 +427,7 @@ paste(x2,x3,x4,x5,sep = "_")
 ```
 
 ```
-## [1] "This _ is _ an _ example"
+[1] "This _ is _ an _ example"
 ```
 
 ```r
@@ -435,7 +435,7 @@ paste(x2,x3,x4,x5,sep = "|")
 ```
 
 ```
-## [1] "This | is | an | example"
+[1] "This | is | an | example"
 ```
 
 ## Getting substring
@@ -450,7 +450,7 @@ long_string
 ```
 
 ```
-## [1] "The birch canoe slid on the smooth planks. The wide road shimmered in the hot sun. The beauty of the view stunned the young boy. Cars and busses stalled in snow drifts."
+[1] "The birch canoe slid on the smooth planks. The wide road shimmered in the hot sun. The beauty of the view stunned the young boy. Cars and busses stalled in snow drifts."
 ```
 
 ```r
@@ -459,7 +459,7 @@ substr(long_string,1,42)
 ```
 
 ```
-## [1] "The birch canoe slid on the smooth planks."
+[1] "The birch canoe slid on the smooth planks."
 ```
 
 ## Splitting string in to list
@@ -473,7 +473,7 @@ long_string=paste0(sentences[c(1,44,25,66)],collapse = " ");long_string
 ```
 
 ```
-## [1] "The birch canoe slid on the smooth planks. The wide road shimmered in the hot sun. The beauty of the view stunned the young boy. Cars and busses stalled in snow drifts."
+[1] "The birch canoe slid on the smooth planks. The wide road shimmered in the hot sun. The beauty of the view stunned the young boy. Cars and busses stalled in snow drifts."
 ```
 
 ```r
@@ -483,8 +483,8 @@ strsplit("20/abc 56/90t/1","/")
 ```
 
 ```
-## [[1]]
-## [1] "20"     "abc 56" "90t"    "1"
+[[1]]
+[1] "20"     "abc 56" "90t"    "1"     
 ```
 
 ```r
@@ -493,8 +493,8 @@ strsplit("GeniusBisBpatience.","B")
 ```
 
 ```
-## [[1]]
-## [1] "Genius"    "is"        "patience."
+[[1]]
+[1] "Genius"    "is"        "patience."
 ```
 
 ```r
@@ -504,9 +504,9 @@ strsplit("It, is` the weight,1 not numbers of experiments that is to be regarded
 ```
 
 ```
-## [[1]]
-## [1] "It, is` the weight,"                               
-## [2] " not numbers of experiments that is to be regarded"
+[[1]]
+[1] "It, is` the weight,"                               
+[2] " not numbers of experiments that is to be regarded"
 ```
 
 ## List to  Vector of strings
@@ -518,10 +518,10 @@ unlist(sample_2)
 ```
 
 ```
-## [1] "The birch canoe slid on the smooth planks"    
-## [2] " The wide road shimmered in the hot sun"      
-## [3] " The beauty of the view stunned the young boy"
-## [4] " Cars and busses stalled in snow drifts"
+[1] "The birch canoe slid on the smooth planks"    
+[2] " The wide road shimmered in the hot sun"      
+[3] " The beauty of the view stunned the young boy"
+[4] " Cars and busses stalled in snow drifts"      
 ```
 
 ## Set Operations
@@ -537,7 +537,7 @@ set=fruit[c(1,5,9,24)];set
 ```
 
 ```
-## [1] "apple"        "bell pepper"  "blood orange" "damson"
+[1] "apple"        "bell pepper"  "blood orange" "damson"      
 ```
 
 ```r
@@ -545,7 +545,7 @@ set1=fruit[c(1,2,10,25,9)];set1
 ```
 
 ```
-## [1] "apple"        "apricot"      "blueberry"    "date"         "blood orange"
+[1] "apple"        "apricot"      "blueberry"    "date"         "blood orange"
 ```
 
 ```r
@@ -553,8 +553,8 @@ union(set,set1)
 ```
 
 ```
-## [1] "apple"        "bell pepper"  "blood orange" "damson"       "apricot"     
-## [6] "blueberry"    "date"
+[1] "apple"        "bell pepper"  "blood orange" "damson"       "apricot"     
+[6] "blueberry"    "date"        
 ```
 
 ### Set intersection
@@ -566,7 +566,7 @@ set
 ```
 
 ```
-## [1] "apple"        "bell pepper"  "blood orange" "damson"
+[1] "apple"        "bell pepper"  "blood orange" "damson"      
 ```
 
 ```r
@@ -574,7 +574,7 @@ set1
 ```
 
 ```
-## [1] "apple"        "apricot"      "blueberry"    "date"         "blood orange"
+[1] "apple"        "apricot"      "blueberry"    "date"         "blood orange"
 ```
 
 ```r
@@ -582,7 +582,7 @@ intersect(set,set1)
 ```
 
 ```
-## [1] "apple"        "blood orange"
+[1] "apple"        "blood orange"
 ```
 
 ### Difference
@@ -598,7 +598,7 @@ setdiff(set1, set2)
 ```
 
 ```
-## [1] "random" "words"
+[1] "random" "words" 
 ```
 
 ### Equality (without order)
@@ -616,7 +616,7 @@ setequal(set3, set4)
 ```
 
 ```
-## [1] FALSE
+[1] FALSE
 ```
 
 ```r
@@ -625,7 +625,7 @@ setequal(set3, set5)
 ```
 
 ```
-## [1] TRUE
+[1] TRUE
 ```
 
 ### Exact equality (with order)
@@ -642,7 +642,7 @@ identical(set3, set3)
 ```
 
 ```
-## [1] TRUE
+[1] TRUE
 ```
 
 ```r
@@ -651,7 +651,7 @@ identical(set3, set5)
 ```
 
 ```
-## [1] FALSE
+[1] FALSE
 ```
 
 ### Element contained with
@@ -668,7 +668,7 @@ is.element(element_1, set10)
 ```
 
 ```
-## [1] TRUE
+[1] TRUE
 ```
 
 ```r
@@ -677,7 +677,7 @@ is.element(element_2, set10)
 ```
 
 ```
-## [1] FALSE
+[1] FALSE
 ```
 
 Alternatively, we can use the binary operator **`%in%`** to test if an element is contained in a given set. The function returns TRUE if the first operand is contained in the second, and it returns FALSE otherwise
@@ -688,7 +688,7 @@ element_1 %in% set10
 ```
 
 ```
-## [1] TRUE
+[1] TRUE
 ```
 
 
@@ -705,8 +705,8 @@ sort(set11)
 ```
 
 ```
-## [1] "10000"     "a"         "beautiful" "example"   "nicely"    "produced" 
-## [7] "today"
+[1] "10000"     "a"         "beautiful" "example"   "nicely"    "produced" 
+[7] "today"    
 ```
 
 ```r
@@ -715,8 +715,8 @@ sort(set11, decreasing = TRUE)
 ```
 
 ```
-## [1] "today"     "produced"  "nicely"    "example"   "beautiful" "a"        
-## [7] "10000"
+[1] "today"     "produced"  "nicely"    "example"   "beautiful" "a"        
+[7] "10000"    
 ```
 
 ## Finding Existence of pattern
@@ -730,9 +730,9 @@ print(s)
 ```
 
 ```
-## [1] "It's easy to tell the depth of a well." 
-## [2] "The swan dive was far short of perfect."
-## [3] "A pencil with black lead writes best."
+[1] "It's easy to tell the depth of a well." 
+[2] "The swan dive was far short of perfect."
+[3] "A pencil with black lead writes best."  
 ```
 Now if we wish to know whether 'the' exists in the sentences we can use **`str_detect()`** 
 this returns Boolean values indicating presence 
@@ -742,7 +742,7 @@ str_detect(s, "the")
 ```
 
 ```
-## [1]  TRUE FALSE FALSE
+[1]  TRUE FALSE FALSE
 ```
 
 so the pattern "the" exists only in 1st sentence of our word as per the function.   
@@ -753,7 +753,7 @@ str_detect(s,regex( "the",ignore_case=T))
 ```
 
 ```
-## [1]  TRUE  TRUE FALSE
+[1]  TRUE  TRUE FALSE
 ```
 
 ## Finding a pattern's position of occurence in vector of strings
@@ -766,7 +766,7 @@ grep("s1",c("science group s1","science group","another group s1"))
 ```
 
 ```
-## [1] 1 3
+[1] 1 3
 ```
 
 ```r
@@ -775,7 +775,7 @@ grepl("s1",c("science group s1","science group","another group s1"))
 ```
 
 ```
-## [1]  TRUE FALSE  TRUE
+[1]  TRUE FALSE  TRUE
 ```
 
 ## Counting number of times pattern occurs
@@ -786,7 +786,7 @@ string=c("s1 science group s1","science group","another group s1");string
 ```
 
 ```
-## [1] "s1 science group s1" "science group"       "another group s1"
+[1] "s1 science group s1" "science group"       "another group s1"   
 ```
 
 ```r
@@ -794,7 +794,7 @@ str_count(string, "s1")
 ```
 
 ```
-## [1] 2 0 1
+[1] 2 0 1
 ```
 
 ## Find and replace
@@ -807,7 +807,7 @@ gsub("data","Data Science",fr,ignore.case=T)
 ```
 
 ```
-## [1] "Data Science is an interesting field to work with"
+[1] "Data Science is an interesting field to work with"
 ```
 
 ```r
@@ -815,7 +815,7 @@ gsub("data ","Data Science",fr)
 ```
 
 ```
-## [1] "Data is an interesting field to work with"
+[1] "Data is an interesting field to work with"
 ```
 
 ## Extracting word using its position
@@ -828,9 +828,9 @@ sentences1 <- sentences[c(12,15,66)];sentences1
 ```
 
 ```
-## [1] "A rod is used to catch pink salmon."    
-## [2] "Help the woman get back to her feet."   
-## [3] "Cars and busses stalled in snow drifts."
+[1] "A rod is used to catch pink salmon."    
+[2] "Help the woman get back to her feet."   
+[3] "Cars and busses stalled in snow drifts."
 ```
 
 ```r
@@ -839,9 +839,9 @@ word(sentences1,start= 1,end=-1,sep=" ")
 ```
 
 ```
-## [1] "A rod is used to catch pink salmon."    
-## [2] "Help the woman get back to her feet."   
-## [3] "Cars and busses stalled in snow drifts."
+[1] "A rod is used to catch pink salmon."    
+[2] "Help the woman get back to her feet."   
+[3] "Cars and busses stalled in snow drifts."
 ```
 
 ```r
@@ -850,8 +850,8 @@ word(sentences1,start=1:3,end=-1,sep=" ")
 ```
 
 ```
-## [1] "A rod is used to catch pink salmon." "the woman get back to her feet."    
-## [3] "busses stalled in snow drifts."
+[1] "A rod is used to catch pink salmon." "the woman get back to her feet."    
+[3] "busses stalled in snow drifts."     
 ```
 
 We can use a wide range of separators based on scenario to extract words
@@ -862,7 +862,7 @@ word(statement,4,sep=fixed(','))
 ```
 
 ```
-## [1] " to"
+[1] " to"
 ```
 
 
